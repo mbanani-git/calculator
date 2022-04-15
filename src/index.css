@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Montserrat:wght@400;500&family=Poppins:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+.main {
+  background-color: rgb(135, 220, 235);
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.calculator {
+  max-height: 500px;
+  width: 350px;
+  padding: 0.5rem;
+}
+
+.c-display {
+  min-height: 150px;
+  background-color: #738b9b;
+  color: white;
+}
+
+.i-display {
+  height: 50px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  overflow-x: hidden;
+}
+.r-display {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  font-size: 1.7rem;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  overflow-y: hidden;
+}
+.i-display p {
+  font-size: 1rem;
+  margin: 0;
+}
+.r-display p {
+  margin: 0;
+}
+
+.c-buttons {
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(55px, 1fr));
+
+  font-family: "Cairo", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-size: 1.5rem;
+}
+
+.c-buttons button {
+  border: none;
+}
+
+.b-grey-top {
+  background-color: #dde3e6;
+  border-right: white solid 0.5px !important;
+  border-bottom: white solid 0.5px !important;
+  color: #96a6ac;
+}
+.b-grey {
+  background-color: #dde3e6;
+  border-bottom: white solid 0.5px !important;
+  color: #96a6ac;
+}
+
+.b-white {
+  border-right: #dde3e6 solid 0.5px !important;
+  border-top: #dde3e6 solid 0.5px !important;
+  color: #96a6ac;
+  background-color: white;
+}
+
+.b-red {
+  background-color: #fc6464;
+  color: white;
+}
+
+.signature {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.title {
+  display: flex;
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+  width: 350px;
+  align-content: flex-end;
+  align-items: center;
+  justify-content: center;
+}
+
+.title img {
+  height: 100px;
+}
+
+.title h1 {
+  font-size: 1.9rem;
+}
+#decimal {
+  font-size: 0.75rem;
+}
+a {
+  text-decoration: none !important;
+}
+.react {
+  font-size: 1.7rem;
+}
+@media only screen and (max-width: 320px) {
+  .calculator,
+  .title {
+    width: 300px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .c-buttons button:hover {
+    transform: scale(1.15);
+    transition: 0.2s linear;
+  }
+}
+@media (pointer: coarse) {
+  .c-buttons button:hover {
+    animation-name: example;
+    animation-duration: 0.3s;
+    transition: linear;
+  }
+  @keyframes example {
+    100% {
+      filter: brightness(0.85);
+    }
+    0% {
+      filter: none;
+    }
+  }
+}
