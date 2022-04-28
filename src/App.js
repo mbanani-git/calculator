@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 
-import {
-  FaPaw,
-  FaBackspace,
-  FaPlus,
-  FaMinus,
-  FaTimes,
-  FaDivide,
-  FaPercentage,
-  FaCircle,
-  FaReact,
-} from "react-icons/fa";
+import { FaPaw, FaBackspace, FaPlus, FaMinus, FaTimes, FaDivide, FaPercentage, FaCircle } from "react-icons/fa";
 function App() {
   const [input, setInput] = useState("0");
   const [display, setDisplay] = useState(0);
@@ -31,13 +21,13 @@ function App() {
       setInput(input);
     } else if (/\w+\s\+\s/g.test(input) && (a === "*" || a === "/") && input.charAt(input.length - 2) === "+") {
       setInput(input.replaceAt(input.indexOf("", input.length - 2), a));
-    } else if (/\w+\s\-\s/g.test(input) && (a === "*" || a === "/") && input.charAt(input.length - 2) === "-") {
+    } else if (/\w+\s-\s/g.test(input) && (a === "*" || a === "/") && input.charAt(input.length - 2) === "-") {
       setInput(input.replaceAt(input.indexOf("", input.length - 2), a));
     } else if (input === "0" && a !== ifValue(a)) {
       setInput(a);
     } else if (/\w+\./g.test(input) && a === "." && !/\w+\.\w+\s/g.test(input)) {
       setInput(input);
-    } else if (/\w+\.\w+\s[+-/*\/]\s\w+\./g.test(input) && a === ".") {
+    } else if (/\w+\.\w+\s[+-/*/]\s\w+\./g.test(input) && a === ".") {
       setInput(input);
     } else {
       setInput(input.concat(a === "+" || a === "-" || a === "*" || a === "/" || a === "%" ? " " + a + " " : a));
