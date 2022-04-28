@@ -1,6 +1,11 @@
 {
-  "name": "calculator",
+  "name": "azuki-calculator",
   "version": "0.1.0",
+  "author": {
+    "name": "mohammed bananai",
+    "email": "contact@thembdev.com",
+    "url": "https://www.thembdev.com/"
+  },
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",

@@ -1,23 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Montserrat:wght@400;500&family=Poppins:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Orbitron:wght@400;500&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .main {
-  background-color: rgb(135, 220, 235);
-  min-height: 100vh;
-  display: grid;
-  justify-content: center;
-  padding-top: 1rem;
+  background-color: rgb(139, 190, 214);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.title img {
+  height: 50px;
+  width: auto;
 }
 
 .calculator {
   max-height: 500px;
   width: 350px;
   padding: 0.5rem;
+  height: fit-content;
 }
 
 .c-display {
   min-height: 150px;
   background-color: #738b9b;
   color: white;
+  font-family: 'Orbitron',
+    sans-serif;
 }
 
 .i-display {
@@ -29,6 +42,7 @@
   padding: 0.5rem;
   overflow-x: hidden;
 }
+
 .r-display {
   height: 100px;
   display: flex;
@@ -40,10 +54,12 @@
   overflow-wrap: break-word;
   overflow-y: hidden;
 }
+
 .i-display p {
   font-size: 1rem;
   margin: 0;
 }
+
 .r-display p {
   margin: 0;
 }
@@ -70,6 +86,7 @@
   border-bottom: white solid 0.5px !important;
   color: #96a6ac;
 }
+
 .b-grey {
   background-color: #dde3e6;
   border-bottom: white solid 0.5px !important;
@@ -98,29 +115,38 @@
   display: flex;
   font-family: "Architects Daughter", cursive;
   text-align: center;
-  width: 350px;
+  max-width: 500px;
   align-content: flex-end;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .title img {
-  height: 100px;
+  height: 70px;
+  width: auto;
+  margin: 0 1rem;
+  transform: scale(1.1);
 }
 
 .title h1 {
   font-size: 1.9rem;
 }
+
 #decimal {
   font-size: 0.75rem;
 }
+
 a {
   text-decoration: none !important;
 }
+
 .react {
   font-size: 1.7rem;
 }
+
 @media only screen and (max-width: 320px) {
+
   .calculator,
   .title {
     width: 300px;
@@ -129,22 +155,47 @@ a {
 
 @media (hover: hover) and (pointer: fine) {
   .c-buttons button:hover {
-    transform: scale(1.15);
+    filter: contrast(0.8);
     transition: 0.2s linear;
   }
 }
+
 @media (pointer: coarse) {
   .c-buttons button:hover {
     animation-name: example;
     animation-duration: 0.3s;
     transition: linear;
   }
+
   @keyframes example {
     100% {
       filter: brightness(0.85);
     }
+
     0% {
       filter: none;
     }
   }
+}
+
+.copyright {
+
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+  font-family: poppins;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright img {
+  width: 32px;
+  height: 100%;
+  margin: 0 0.5rem;
+}
+
+.copyright img:hover {
+  filter: brightness(1.2);
 }

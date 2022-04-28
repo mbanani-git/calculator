@@ -149,15 +149,12 @@ function App() {
           </button>
         </div>
       </section>
-      <div className="signature my-2">
-        <p>
-          By mbanani <a href="https://www.linkedin.com/in/mbdev-/">@mbdiv_ </a>
-          using
-          <a href="https://reactjs.org/">
-            <FaReact className="react mx-1" />
-          </a>
-        </p>
-      </div>
+      <section className="copyright">
+        Created by{" "}
+        <a href="https://thembdev.com">
+          <img src={"https://mbdev-utils.s3.eu-west-3.amazonaws.com/mbdev_logo_sm.svg"} alt="mbdev" />
+        </a>
+      </section>
     </div>
   );
 }
