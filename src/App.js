@@ -65,7 +65,7 @@ function App() {
     <div className="main">
       <div className="title">
         <img src="./azuki.png" alt="azuki" />
-        <h1>Azuki's Calculator</h1>
+        <h1>Calculator</h1>
       </div>
       <section className="calculator shadow p-3 mb-2  ">
         <div className="c-display">
